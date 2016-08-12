@@ -1,5 +1,6 @@
 [class*='container_'] {
   @include clearfix;
+  color: $color-text-secondary;
   margin-left: auto;
   margin-right: auto;
 

@@ -1,7 +1,14 @@
-$grid-width-12: 960px;
-$grid-width-16: 960px;
-$grid-width-24: 960px;
-
-$grid-gutter-12: 20px;
-$grid-gutter-16: 20px;
-$grid-gutter-24: 10px;
+$grid: (
+  12: (
+    width: 960px,
+    gutter: 20px,
+  ),
+  16: (
+    width: 960px,
+    gutter: 20px,
+  ),
+  24: (
+    width: 960px,
+    gutter: 10px,
+  )
+);

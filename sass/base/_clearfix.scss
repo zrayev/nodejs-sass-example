@@ -2,6 +2,7 @@
   clear: both;
 }
 
+.cf,
 .clearfix {
   @include clearfix();
 }
