@@ -1,0 +1,10 @@
+[class*='container_'] {
+  @include clearfix;
+  margin-left: auto;
+  margin-right: auto;
+
+  [class*='push_'],
+  [class*='pull_'] {
+    position: relative;
+  }
+}

@@ -1,0 +1,43 @@
+.container_12 {
+  background-image: url(quote($images-path + '/12_col.gif'));
+  width: $grid-width-12;
+
+  p {
+    border: 1px solid $color-borders-main;
+    text-align: center;
+  }
+
+  @for $i from 1 through 12 {
+    .grid_#{$i} {
+      width: columns-width($grid-width-12, $grid-gutter-12, 12, $i);
+      margin: 1em $grid-gutter-12 / 2;
+      float: left;
+    }
+
+    .prefix_#{$i} {
+      margin-left: (column-width($grid-width-12, $grid-gutter-12, 12) * $i + $grid-gutter-12 * $i + $grid-gutter-12 / 2);
+    }
+
+    .suffix_#{$i} {
+      margin-right: (column-width($grid-width-12, $grid-gutter-12, 12) * $i + $grid-gutter-12 * $i + $grid-gutter-12 / 2);
+    }
+
+    .push_#{$i} {
+      left: column-width($grid-width-12, $grid-gutter-12, 12) * $i + $grid-gutter-12 * $i;
+    }
+
+    .pull_#{$i} {
+      left: -1 * (column-width($grid-width-12, $grid-gutter-12, 12) * $i + $grid-gutter-12 * $i);
+    }
+
+    .alpha {
+      margin-left: 0;
+    }
+
+    .omega {
+      margin-right: 0;
+    }
+  }
+}
+
+

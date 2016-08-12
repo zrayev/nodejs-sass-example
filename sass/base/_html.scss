@@ -1,0 +1,12 @@
+html {
+  font-family: $font-family-main;
+  font-size: 16px;
+  line-height: 1.5em;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+}
