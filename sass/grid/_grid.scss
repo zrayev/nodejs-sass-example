@@ -1,0 +1,40 @@
+@each $key, $gs in $grid {
+
+.container-#{$key} {
+  background-image: url(quote($images-path + '/#{$key}_col.gif'));
+  width: map_get($gs, width);
+
+    @for $i from 1 through $key {
+      .grid-#{$i} {
+        width: columns-width($gs, $i);
+        margin: 1em map_get($gs, 'gutter') / 2;
+        float: left;
+
+        &:before {
+          content: "#{$i}/#{$key}";
+        }
+      }
+
+      .prefix-#{$i} {
+        @include col-prefix($gs, $i);
+      }
+
+      .suffix-#{$i} {
+        @include col-suffix($gs, $i);
+      }
+
+      .push-#{$i} {
+        @include col-push($gs, $i);
+      }
+
+      .pull-#{$i} {
+        @include col-pull($gs, $i);
+      }
+
+
+    }
+  }
+
+}
+
+

@@ -1,0 +1,29 @@
+@import "col-width";
+
+@function col-indent($grid-settings, $cols) {
+  $g: map_get($grid-settings, 'gutter');
+
+  @return $cols * (column-width($grid-settings) + $g);
+}
+
+@function col-margin($grid-settings, $cols) {
+  $g: map_get($grid-settings, 'gutter');
+
+  @return col-indent($grid-settings, $cols) + $g / 2;
+}
+
+@mixin col-prefix($grid-settings, $cols) {
+  margin-left: col-margin($grid-settings, $cols);
+}
+
+@mixin col-suffix($grid-settings, $cols) {
+  margin-right: col-margin($grid-settings, $cols);
+}
+
+@mixin col-push($grid-settings, $cols) {
+  left: col-indent($grid-settings, $cols);
+}
+
+@mixin col-pull($grid-settings, $cols) {
+  left: -1 * col-indent($grid-settings, $cols);
+}

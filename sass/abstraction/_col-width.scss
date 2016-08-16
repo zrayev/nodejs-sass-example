@@ -1,0 +1,12 @@
+@function column-width($grid-settings) {
+  $w: map_get($grid-settings, 'width');
+  $g: map_get($grid-settings, 'gutter');
+  $c: map_get($grid-settings, 'columns');
+
+  @return ($w / $c) - $g;
+}
+
+@function columns-width($grid-settings, $cols) {
+  $g: map_get($grid-settings, 'gutter');
+  @return column-width($grid-settings) * $cols + $g * ($cols - 1);
+}

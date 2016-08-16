@@ -1,11 +1,36 @@
-[class*='container_'] {
+.grid-container {
   @include clearfix;
   color: $color-text-secondary;
   margin-left: auto;
   margin-right: auto;
 
-  [class*='push_'],
-  [class*='pull_'] {
-    position: relative;
+  .grid-col {
+
+
+    &[class*='push_'],
+    &[class*='pull_'] {
+      position: relative;
+    }
+
+    &.first,
+    &.alpha {
+      margin-left: 0;
+    }
+
+    &.last,
+    &.omega {
+      margin-right: 0;
+    }
+
+    &:before {
+      display: block;
+      font-size: 0.875em;
+      margin: 0;
+      padding: 1em 0;
+      text-align: center;
+      border: 1px solid $color-borders-main;
+    }
+
   }
+
 }
