@@ -6,3 +6,7 @@
 .clearfix {
   @include clearfix();
 }
+
+.my-new-clearfix {
+  @include clearfix();
+}

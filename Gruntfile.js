@@ -13,7 +13,11 @@ module.exports = function (grunt) {
         precision: 8,
         sourceComments: true,
         sourceMap: true,
-        outputStyle: 'expanded'
+        outputStyle: 'expanded',
+        includePaths: [
+          // Include necessary node modules.
+          'node_modules/susy/sass'
+        ]
       },
       files: {
         expand: true,

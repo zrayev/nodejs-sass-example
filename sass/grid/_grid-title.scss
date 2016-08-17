@@ -1,0 +1,9 @@
+@each $key, $grid-settings in $grid {
+  .container-#{$key} {
+    & > h2 {
+      @include col-prefix($grid-settings, (map_get($grid-settings, 'columns') - 6) / 2);
+      @include col-suffix($grid-settings, (map_get($grid-settings, 'columns') - 6) / 2);
+      width: columns-width($grid-settings, 6);
+    }
+  }
+}

@@ -9,6 +9,7 @@
     "grunt-sass": "latest",
     "load-grunt-tasks": "latest",
     "node-sass": "latest",
+    "susy": "latest",
     "time-grunt": "latest"
   },
   "engines": {
