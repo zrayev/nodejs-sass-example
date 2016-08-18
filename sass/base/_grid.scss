@@ -5,7 +5,8 @@
   margin-right: auto;
 
   .grid-col {
-
+    margin-top: 1em;
+    margin-bottom: 1em;
 
     &[class*='push_'],
     &[class*='pull_'] {
@@ -14,23 +15,29 @@
 
     &.first,
     &.alpha {
-      margin-left: 0;
+      @include first;
     }
 
     &.last,
     &.omega {
-      margin-right: 0;
+      @include last;
     }
 
     &:before {
+      border: 1px solid $color-borders-main;
       display: block;
-      font-size: 0.875em;
+      font-size: .875em;
       margin: 0;
       padding: 1em 0;
       text-align: center;
-      border: 1px solid $color-borders-main;
     }
 
+  }
+
+  & > .clear + .grid-col {
+    & + .grid-col {
+      @include last;
+    }
   }
 
 }
